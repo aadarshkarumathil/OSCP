@@ -19,3 +19,11 @@
 spawning tty shell :- 
 follow
 https://netsec.ws/?p=337
+
+for GUID and GEUID exploits check :- 
+
+Variables: - 
+1.  Path
+﻿2. IFS: adding / will make it like /bin/sh
+3. LD_Library_Path : Used to load libraries for ld
+4. LD_PRELOAD

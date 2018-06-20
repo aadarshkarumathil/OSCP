@@ -1,0 +1,38 @@
+
+Adobe's software
+more info at 
+chris gates coldfusion 
+
+Deconstructing coldfusion
+CFML - cold fucion markup language
+ralio,Mura CMS,Open Bluedragon are alternatives
+filetype:"cfapplication name" password
+
+check
+/cfide
+/cfide/componentutils/
+
+common vulnerabilites: -
+xss
+information disclosure
+sql injection 
+admin interfaces exposed
+
+request a jsp to check if it is a standard or enterprise application 
+500 error - standard
+404 error - enterprise
+
+scriptProtect helps strip <script>tags
+&lt;\s*(object|embed|script|applet|meta)
+
+cfquery name="get content"
+dataSource="myDataSource"
+
+/CFIDE/adminapi/base.cfc?wsdl
+
+BladeDS/AMF External XML entity injection
+affects 9.0,8.0.1,8.0,7.0.2
+
+Directory traversal in version 7 and 8 check exploitdb script 14641
+
+JSP SHELL IS EASIER

