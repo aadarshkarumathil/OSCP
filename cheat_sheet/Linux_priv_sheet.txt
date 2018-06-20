@@ -1,0 +1,21 @@
+1. Check uname -a ( kernel version) or rpm -q kernel
+2. cat /etc/*-release (distro and distro version)
+3. lsb_release -a ( flavor of linux)
+4. cat /etc/issue ( gives more information)
+5. dmesg | grep Linux (gives kernel,gcc version and distro)
+6. Get more info on environment variables : - env,.bashrc,.bash_profile,set
+7. lpstat -a (get info on printer)
+8. Check history - including all services.
+9. Check mail.
+10. Check ssh keys.
+11. Check logs
+12. find advanced file permissions
+13. search in searchsploit using multiple things like distro flavour and version
+14. find / -perm -u=s -type f 2>/dev/null
+15. look for ssh keys
+16. check cron
+17. linux cred: -  find . -type f -maxdepth 4 | xargs grep -i "password"
+
+spawning tty shell :- 
+follow
+https://netsec.ws/?p=337

