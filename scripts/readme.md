@@ -1,1 +1,3 @@
-Still in works working on a enumeration script to automate web enumeration.
+Still in works. 
+A script which does web enum adn displays all useful information.
+Designing it based on kali linux.
