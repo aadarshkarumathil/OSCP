@@ -14,14 +14,23 @@ class WebCrawler
 		crawl = Mechanize.new
 		url = "http://#{@ip}:#{@port}/#{@dir}"
 		puts url
-		page = crawl.get(url)
-		page.links.each do |link| 
+		@page = crawl.get(url)
+		@page.links.each do |link| 
 			if link.href.include? hostname then
 			puts "#{link.href}"
-		end
+			end
 		end	
+	end
+
+	def get_headers()
+		 puts("\n"*3)
+		 puts " ************************Displaying Header information*************************************"
+		 @page.header.to_s.split(',').each do |header|
+		 	puts header
+		 end
 	end
 end
 
-a = WebCrawler.new("www.wikipedia.org",80,'')
+a = WebCrawler.new("www.theuselessweb.com",80,'')
 a.start
+a.get_headers
