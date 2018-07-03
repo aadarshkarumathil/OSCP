@@ -88,7 +88,7 @@ class WebEnum
 	end
 end
 
-a = WebEnum.new("69.27.54.149",80,'')
+a = WebEnum.new("www.google.com",80,'')
 a.start	
 a.get_headers
 a.get_input_tags
