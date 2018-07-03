@@ -1,3 +1,8 @@
 Still in works. 
-A script which does web enum adn displays all useful information.
-Designing it based on kali linux.
+Present features:-
+
+1. Looks for all the Links using mechanize
+2. Gets links from robots.txt
+3. Displays the header from the server
+4. gets input tags from a page
+4. gets additional all links from the page.
